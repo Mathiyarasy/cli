@@ -1,5 +1,5 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "image": "vsc-original_container-c711dace8ef1de9d84f80d1f5cc0cc7b0fdf76f37bb20212f935fbee72d9d3d6",
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
             "version": "none"

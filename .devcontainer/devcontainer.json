@@ -15,7 +15,10 @@
 		"source=dev-containers-cli-bashhistory,target=/home/node/commandhistory"
 	],
 
-	"postCreateCommand": "yarn install",
+	"postCreateCommand": {
+		"yarnSetup": "yarn install",
+		"devcontainrInstall": "npm install -g @devcontainers/cli"
+	},
 
 	"remoteUser": "node",
 	

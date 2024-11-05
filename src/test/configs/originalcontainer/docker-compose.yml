@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  devcontainerissues:
+    image: testformatissue
+    environment:
+      - Test_Message=Hello Maxie
+      - "ROSCONSOLE_FORMAT=[$${severity}] [$${walltime:%Y-%m-%d %H:%M:%S}] [$${node}] : $${message}"
+    labels:
+      - 'devcontainer.local_folder=/workspaces/cli/src/test/configs/image-containerEnv-issue'
+      - 'devcontainer.config_file=/workspaces/cli/src/test/configs/image-containerEnv-issue/.devcontainer/devcontainer.json'
+      - 'devcontainer.metadata=[{"containerEnv":{"Test_Message":"Hello Mathi","ROSCONSOLE_FORMAT":"[$${severity}] [$${walltime:%Y-%m-%d %H:%M:%S}] [$${node}]: $${message}"}},{"containerEnv":{"Test_Message":"Hello Maxie"}}]'
+    command: ["sh", "-c", "echo $Test_Message && echo $ROSCONSOLE_FORMAT && sleep infinity"]
