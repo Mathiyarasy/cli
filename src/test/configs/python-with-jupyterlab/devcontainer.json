@@ -1,0 +1,16 @@
+{
+	"name": "Only Jupyter",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"hostRequirements": {
+	  "cpus": 4
+	},
+	"features": {
+	  "ghcr.io/devcontainers/features/python": {
+		"version": "3.10",
+		"installJupyterlab": true,
+		"configureJupyterlabAllowOrigin": "*"
+	  }
+	},
+	"containerUser": "vscode"
+  }
+  
